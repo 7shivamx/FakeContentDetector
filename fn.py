@@ -9,7 +9,7 @@
 
 import spacy
 import yake
-from newsapi import NewsApiClient
+from newsapi.newsapi_client import NewsApiClient
 
 import numpy as np
 import faiss
