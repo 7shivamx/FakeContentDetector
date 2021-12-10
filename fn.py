@@ -29,8 +29,11 @@ from googletrans import Translator
 import streamlit as st
 
 import os
+@st.cache(allow_output_mutation=True) 
 os.popen("python -m spacy download en_core_web_sm")
 os.popen("python -m laserembeddings download-models")
+
+
 
 def get_keywords_spacy(text):
     doc = nlp(text)
