@@ -16,7 +16,6 @@ import faiss
 
 from string import punctuation
 from nltk.tokenize import sent_tokenize
-from laserembeddings import Laser
 from sklearn.decomposition import PCA
 from Levenshtein import distance as levenshtein_distance
 import requests
@@ -30,8 +29,8 @@ import streamlit as st
 
 import os
 @st.cache(allow_output_mutation=True) 
-os.popen("python -m spacy download en_core_web_sm")
-os.popen("python -m laserembeddings download-models")
+# os.popen("python -m spacy download en_core_web_sm")
+# os.popen("python -m laserembeddings download-models")
 
 
 
@@ -160,7 +159,8 @@ def filter_paraphrases(I, sequences, min_l_dist=0.2):
     return I
 
 def find_l2_distance(text):
-    nlp = spacy.load("en_core_web_sm")
+    # nlp = spacy.load("en_core_web_sm")
+    nlp = spacy.load("model") 
     translator = Translator()
     newsapi = NewsApiClient(api_key='e24dd3440d0443f48b53a0f8bb7cf97b')
     nltk.download('punkt')
