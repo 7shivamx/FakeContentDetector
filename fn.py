@@ -162,7 +162,6 @@ def find_l2_distance(text):
     # nlp = spacy.load("en_core_web_sm")
     nlp = spacy.load("model") 
     translator = Translator()
-    newsapi = NewsApiClient(api_key='e24dd3440d0443f48b53a0f8bb7cf97b')
     nltk.download('punkt')
     sbert_model = SentenceTransformer('bert-base-nli-mean-tokens')
 
@@ -205,6 +204,8 @@ def generate_output(text):
     else:
         st.markdown("<h1><span style='color:red'>This is a fake news article!</span></h1>", unsafe_allow_html=True)   
 
+newsapi = NewsApiClient(api_key='e24dd3440d0443f48b53a0f8bb7cf97b')	
+	
 desc = "This web app detects fake news.\
         You can either enter the URL of a news article, or paste the text directly."
 
