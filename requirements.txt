@@ -13,5 +13,5 @@ requests==2.23.0
 scikit_learn==1.0.1
 sentence_transformers==2.1.0
 spacy==2.2.4
-streamlit==1.2.0
+streamlit==1.11.1
 yake==0.4.8
